@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_login"
+
+    android:layout_height="match_parent"
+    tools:context=".RigesterActivity">
+    <android.support.constraint.Guideline
+        android:id="@+id/gudline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gudline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <EditText
+        android:id="@+id/emial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/gudline_left"
+        app:layout_constraintEnd_toEndOf="@id/gudline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="90dp"
+        android:inputType="textEmailAddress"
+        android:background="@color/login_form_detail_light"
+        android:hint="Email address"
+        android:textColorHint="@color/White"
+        android:padding="16dp"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/gudline_left"
+        app:layout_constraintEnd_toEndOf="@id/gudline_right"
+        app:layout_constraintTop_toBottomOf="@+id/emial"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:padding="16dp"
+        android:textColorHint="@color/White"
+        android:background="@color/login_form_detail_light"
+        android:inputType="textPassword"
+        android:drawableRight="@drawable/ic_eye"
+        />
+    <EditText
+        android:id="@+id/re_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/gudline_left"
+        app:layout_constraintEnd_toEndOf="@id/gudline_right"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:layout_marginTop="16dp"
+        android:hint="Re-Password"
+        android:padding="16dp"
+        android:textColorHint="@color/White"
+        android:background="@color/login_form_detail_light"
+        android:inputType="textPassword"
+        android:drawableRight="@drawable/ic_eye"
+        />
+
+    <Button
+        android:id="@+id/btn_signup1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/gudline_right"
+        app:layout_constraintTop_toBottomOf="@+id/re_password"
+        app:layout_constraintStart_toEndOf="@id/btn_login1"
+        android:layout_marginLeft="15sp"
+        android:hint="Singup"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_login"
+        android:textColorHint="@color/White"
+        />
+    <Button
+        android:id="@+id/btn_login1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/gudline_left"
+        app:layout_constraintEnd_toStartOf="@id/btn_signup1"
+        app:layout_constraintTop_toBottomOf="@+id/re_password"
+        android:hint="login"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_login"
+        android:textColorHint="@color/White"
+        />
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/gudline_left"
+        app:layout_constraintEnd_toEndOf="@id/gudline_right"
+        app:layout_constraintTop_toBottomOf="@id/btn_login1"
+        android:text="Dont't Rember Password"
+        android:textColor="@color/White"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/txt_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login with Facebook"
+        android:drawableLeft="@drawable/facebook"
+        android:drawablePadding="8dp"
+        android:textColor="@color/White"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="@id/gudline_left"
+        app:layout_constraintEnd_toEndOf="@id/gudline_right"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
